@@ -1,25 +1,13 @@
-<div class="container"></div>
-<div class="row">
-  <div class="col-xs-12">
-    <img src="" alt="" class="img-responsive">
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <h1>Book Title</h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <div class="btn-group">
-      <button type="button"
-      class="bth btn-primary drop-down-toggle"> Manage Book <span class="caret"></span>
-    </button>
-    <ul>
-      <li><a href="#">Add Book</a></li>
-      <li><a href="#">Edit Book</a></li>
-      <li><a href="#">Delete Book</a></li>
-    </ul>
+<!-- display card...image, content, buttons on bottom for edit-save-delet -->
+  <div class="card" style="width: 18rem;">
+    <img [src]="book.imagePath" class="card-img-top" alt="{{ book.title }}">
+    <div class="card-body">
+      <h4 class="card-title">{{ book.title}}</h4>
+      <h5>{{ book.name }}</h5>
+      <h6>{{ book.genre }}</h6>
+      <p class="card-text">{{ book.description }}.</p>
+      <a href="#" class="btn btn-primary">
+        Go somewhere
+      </a>
     </div>
   </div>
-</div>

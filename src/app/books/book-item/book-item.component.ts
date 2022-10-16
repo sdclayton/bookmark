@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Book } from '../book.model';
+import { BookService } from '../book.service';
 
 @Component({
   selector: 'app-book-item',
@@ -9,9 +10,14 @@ import { Book } from '../book.model';
 export class BookItemComponent implements OnInit {
   @Input() book: Book;
 
-  constructor() { }
+  // method executed at a point in time component is set
+  constructor(private bookService: BookService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
+  // call method in service which will transfer data
+  onSelected() {
+    this.bookService.bookSelected.emit(this.book);
+  }
 }
