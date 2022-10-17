@@ -14,7 +14,7 @@ export class BookService {
     new Book('Breaking The Habit of Being Yourself: How to Lose Your Mind and Create a New One', 'Dr. Joe Dispenza', 'Self-Improvement', 'In Breaking the Habit of Being Yourself, renowned author, speaker, researcher, and chiropractor Dr. Joe Dispenza combines the fields of quantum physics, neuroscience, brain chemistry, biology, and genetics to show you what is truly possible.', 'https://m.media-amazon.com/images/I/51RRcIBg93L._SL500_FMwebp_.jpg')
   ];
 
-  // to get access from outside
+  // return [] to get access from outside
   getBooks() {
     // w/ using slice, will return a new array w/ exact coly of the one in service file...will get a copy
     return this.books.slice();
